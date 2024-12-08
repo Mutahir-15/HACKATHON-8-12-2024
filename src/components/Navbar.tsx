@@ -17,9 +17,9 @@ const Navbar = () => {
 
         {/* Left Section */}
         <div className="flex hidden lg:flex justify-end mb-2 gap-5 items-center text-md text-left">
-          <Link href={"/"} className="bg-customColors-primary p-2 px-6 text-white hover:bg-customColors-border-dark hover:text-customColors-dark-primary hover:font-bold">Home</Link>
-          <Link href={"/product-listings"} className="bg-customColors-primary p-2 px-6 text-white hover:bg-customColors-border-dark hover:text-customColors-dark-primary hover:font-bold">Listing</Link>
-          <Link href={"/cart"} className="bg-customColors-primary p-2 px-6 text-white hover:bg-customColors-border-dark hover:text-customColors-dark-primary hover:font-bold">Shopping Cart</Link>
+          <Link href={"/"} className="font-bold bg-customColors-border-dark p-2 px-6 text-customColors-dark-primary hover:bg-customColors-dark-primary hover:text-customColors-light-grey hover:font-bold">Home</Link>
+          <Link href={"/product-listings"} className=" font-bold bg-customColors-border-dark p-2 px-6 text-customColors-dark-primary hover:bg-customColors-dark-primary hover:text-customColors-light-grey hover:font-bold">Listing</Link>
+          <Link href={"/cart"} className="bg-customColors-border-dark font-bold p-2 px-6 text-customColors-dark-primary hover:bg-customColors-dark-primary  hover:text-customColors-light-grey hover:font-bold">Shopping Cart</Link>
           <MdOutlineShoppingCart className="top-[26px] mr-4" />
           <FaRegUserCircle className="mr-4"/>
           <IoSearch />
