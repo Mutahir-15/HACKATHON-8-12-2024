@@ -12,12 +12,12 @@ function SignUp() {
           layout="fill"
           objectFit="cover"
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-8 bg-black bg-opacity-0">
+        <div className="absolute inset-0 flex flex-col items-left md:items-center justify-center text-white p-8 bg-black bg-opacity-0">
           <h2 className="text-3xl font-bold mb-4">
             Join the club and get the benefits
           </h2>
           <p className=" mb-6 text-center">
-            Sign up for our newsletter and receive exclusive offers on <br />
+            Sign up for our newsletter and receive exclusive offers on
             new ranges, sales, pop-up stores, and more
           </p>
           <div className="flex mb-6">
