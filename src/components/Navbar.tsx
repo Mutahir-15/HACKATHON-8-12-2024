@@ -17,9 +17,9 @@ const Navbar = () => {
 
         {/* Left Section */}
         <div className="flex hidden lg:flex justify-end mb-2 gap-5 items-center text-md text-left">
-          <Link href={"/"} className="bg-customColors-dark-primary p-2 px-6 text-white hover:bg-customColors-border-dark hover:text-customColors-dark-primary hover:font-bold">Home</Link>
-          <Link href={"/product-listings"} className="bg-customColors-dark-primary p-2 px-6 text-white hover:bg-customColors-border-dark hover:text-customColors-dark-primary hover:font-bold">Listing</Link>
-          <Link href={"/cart"} className="bg-customColors-dark-primary p-2 px-6 text-white hover:bg-customColors-border-dark hover:text-customColors-dark-primary hover:font-bold">Shopping Cart</Link>
+          <Link href={"/"} className="bg-customColors-primary p-2 px-6 text-white hover:bg-customColors-border-dark hover:text-customColors-dark-primary hover:font-bold">Home</Link>
+          <Link href={"/product-listings"} className="bg-customColors-primary p-2 px-6 text-white hover:bg-customColors-border-dark hover:text-customColors-dark-primary hover:font-bold">Listing</Link>
+          <Link href={"/cart"} className="bg-customColors-primary p-2 px-6 text-white hover:bg-customColors-border-dark hover:text-customColors-dark-primary hover:font-bold">Shopping Cart</Link>
           <MdOutlineShoppingCart className="top-[26px] mr-4" />
           <FaRegUserCircle className="mr-4"/>
           <IoSearch />
