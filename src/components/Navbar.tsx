@@ -46,12 +46,12 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <Sheet>
         <div className="flex mr-5 items-center justify-end">
-        <SheetTrigger className=" lg:hidden">
+        <SheetTrigger className="lg:hidden">
           <Menu className="w-6 h-6" />
         </SheetTrigger> 
         </div>
-        <SheetContent className="p-4">
-        <div className="flex justify-end gap-5 items-center text-md text-left">
+        <SheetContent className="w-full">
+        <div className="flex justify-end gap-5 items-right text-md text-right">
           <Link href={"/product-listings"}>Listing</Link>
           <Link href={"/product-listing"}>Sample Product</Link>
           <Link href={"/cart"}>Shopping Cart</Link>
