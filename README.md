@@ -1,4 +1,12 @@
-Vercel Link: https://hackathon-ui-ux-temp2-git-main-mutahirs-projects-64c2172d.vercel.app/
+Vercel Link: (After some time the links automatically changed a bit. So, I attatched both Link to make it easier for the Honorable Faculty.)
+https://hackathon-ui-ux-temp2-git-main-mutahirs-projects-64c2172d.vercel.app/
+https://hackathon-ui-ux-temp2.vercel.app/
+
+Routing Guide:
+1. / (Home)
+2. /product-listing
+3. /product-listings
+4. /cart
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
