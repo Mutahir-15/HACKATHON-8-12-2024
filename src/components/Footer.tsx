@@ -9,7 +9,7 @@ import { IoLogoPinterest } from "react-icons/io5";
 function Footer() {
   return (
     <footer className="bg-customColors-dark-primary text-white py-8">
-      <div className="max-w-[1440px] mx-auto container grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-[1440px] mx-auto container grid grid-cols-2 p-3 md:grid-cols-4 gap-8">
         {/* Menu Section */}
         <div>
           <h4 className="font-bold mb-4">Menu</h4>
