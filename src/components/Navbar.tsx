@@ -8,20 +8,71 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
 const Navbar = () => {
   return (
-    <div className="navbar p-5">
+    <div className="navbar p-4 md:p-5">
       {/* Top Nav */}
       <div className="container mt-4 mx-auto flex justify-between items-center">
-
-        {/* Center Logo */}
-        <h1 className="text-2xl text-right font-bold">Avion</h1>
+        <div className="flex flex-1 justify-between items-center">
+          {/* Main Title */}
+          <h1 className="text-2xl text-right font-bold">Avion</h1>
+          {/* Mobile Menu */}
+          <Sheet>
+            <SheetTrigger className="lg:hidden">
+              <Menu className="w-6 h-6" />
+            </SheetTrigger>
+            <SheetContent className="p-14 w-full">
+              <div className="flex justify-end gap-5 items-center text-md text-right">
+                <Link href={"/product-listings"}>Listing</Link>
+                <Link href={"/product-listing"}>Sample Product</Link>
+                <Link href={"/cart"}>Shopping Cart</Link>
+                <MdOutlineShoppingCart className="w-6 h-6 " />
+                <FaRegUserCircle className="w-6 h-6 " />
+                <IoSearch className="w-6 h-6 " />
+              </div>
+              <div className="grid grid-cols-1 gap-4">
+                {[
+                  "Plant pots",
+                  "Ceramics",
+                  "Tables",
+                  "Chairs",
+                  "Crockery",
+                  "Tableware",
+                  "Cutlery",
+                ].map((item, index) => (
+                  <Link
+                    href="#"
+                    key={index}
+                    className="block text-gray-700 hover:text-black mb-2"
+                  >
+                    {item}
+                  </Link>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
 
         {/* Left Section */}
         <div className="flex hidden lg:flex justify-end mb-2 gap-5 items-center text-md text-left">
-          <Link href={"/"} className="font-bold bg-customColors-border-dark p-2 px-6 text-customColors-dark-primary hover:bg-customColors-dark-primary hover:text-customColors-light-grey hover:font-bold">Home</Link>
-          <Link href={"/product-listings"} className=" font-bold bg-customColors-border-dark p-2 px-6 text-customColors-dark-primary hover:bg-customColors-dark-primary hover:text-customColors-light-grey hover:font-bold">Listing</Link>
-          <Link href={"/cart"} className="bg-customColors-border-dark font-bold p-2 px-6 text-customColors-dark-primary hover:bg-customColors-dark-primary  hover:text-customColors-light-grey hover:font-bold">Shopping Cart</Link>
+          <Link
+            href={"/"}
+            className="font-bold bg-customColors-border-dark p-2 px-6 text-customColors-dark-primary hover:bg-customColors-dark-primary hover:text-customColors-light-grey hover:font-bold"
+          >
+            Home
+          </Link>
+          <Link
+            href={"/product-listings"}
+            className=" font-bold bg-customColors-border-dark p-2 px-6 text-customColors-dark-primary hover:bg-customColors-dark-primary hover:text-customColors-light-grey hover:font-bold"
+          >
+            Listing
+          </Link>
+          <Link
+            href={"/cart"}
+            className="bg-customColors-border-dark font-bold p-2 px-6 text-customColors-dark-primary hover:bg-customColors-dark-primary  hover:text-customColors-light-grey hover:font-bold"
+          >
+            Shopping Cart
+          </Link>
           <MdOutlineShoppingCart className="top-[26px] mr-4" />
-          <FaRegUserCircle className="mr-4"/>
+          <FaRegUserCircle className="mr-4" />
           <IoSearch />
         </div>
       </div>
@@ -42,38 +93,6 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-
-      {/* Mobile Menu */}
-      <Sheet>
-        <div className="flex mr-5 items-center justify-end">
-        <SheetTrigger className="lg:hidden">
-          <Menu className="w-6 h-6" />
-        </SheetTrigger> 
-        </div>
-        <SheetContent className="w-full">
-        <div className="flex justify-end gap-5 items-right text-md text-right">
-          <Link href={"/product-listings"}>Listing</Link>
-          <Link href={"/product-listing"}>Sample Product</Link>
-          <Link href={"/cart"}>Shopping Cart</Link>
-          <MdOutlineShoppingCart className="top-[26px] mr-4" />
-          <FaRegUserCircle className="mr-4"/>
-          <IoSearch />
-        </div>
-          {[
-            "Plant pots",
-            "Ceramics",
-            "Tables",
-            "Chairs",
-            "Crockery",
-            "Tableware",
-            "Cutlery",
-          ].map((item, index) => (
-            <Link href="#" key={index} className="block text-gray-700 hover:text-black mb-2">
-              {item}
-            </Link>
-          ))}
-        </SheetContent>
-      </Sheet>
     </div>
   );
 };
