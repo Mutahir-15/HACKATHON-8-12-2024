@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 function HeroSection() {
   return (
@@ -25,7 +26,7 @@ function HeroSection() {
           </p>
           {/* Button Here */}
           <button className="mt-24 px-6 py-3 bg-customColors-dark-primary text-white font-medium hover:bg-gray-800">
-            View collection
+            <Link href="/product-listings">View collection</Link>
           </button>
         </div>
       </div>

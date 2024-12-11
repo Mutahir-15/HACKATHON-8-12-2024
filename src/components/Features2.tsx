@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 function Features2() {
   return (
@@ -13,7 +14,7 @@ function Features2() {
           </p>
         </div>
         <button className="bg-[#4A4A6A] text-white px-6 py-3 font-medium cursor-pointer hover:bg-[#3a3a5a]">
-          View collection
+        <Link href="/product-listings">View collection</Link>
         </button>
       </div>
 

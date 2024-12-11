@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Listing() {
     return (
@@ -32,7 +33,7 @@ function Listing() {
           </div>
           <div className="text-center mt-8">
             <button className="w-full md:w-[170px] px-30 lg:px-8 py-3 bg-gray-300 text-black font-medium hover:bg-gray-800 hover:text-white">
-              View collection
+            <Link href="/product-listings">View collection</Link>
             </button>
           </div>
         </section>
