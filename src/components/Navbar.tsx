@@ -52,19 +52,19 @@ const Navbar = () => {
         <div className="flex hidden lg:flex justify-end mb-2 gap-5 items-center text-md text-left">
           <Link
             href={"/"}
-            className="font-bold p-2  px-6 hover:bg-customColors-dark-primary hover:text-customColors-light-grey hover:font-bold"
+            className="p-2 text-gray-700 px-6 hover:text-customColors-primary hover:font-bold"
           >
             Home
           </Link>
           <Link
             href={"/product-listings"}
-            className=" font-bold p-2 px-6 hover:bg-customColors-dark-primary hover:text-customColors-light-grey hover:font-bold"
+            className="p-2 text-gray-700 px-6 hover:text-customColors-primary hover:font-bold"
           >
             Listing
           </Link>
           <Link
             href={"/cart"}
-            className="font-bold p-2 px-6 hover:bg-customColors-dark-primary  hover:text-customColors-light-grey hover:font-bold"
+            className="p-2 text-gray-700 px-6  hover:text-customColors-primary hover:font-bold"
           >
             Shopping Cart
           </Link>
