@@ -20,7 +20,22 @@ const Navbar = () => {
               <Menu className="w-6 h-6" />
             </SheetTrigger>
             <SheetContent className="p-14 w-full">
-              <div className="flex justify-end gap-5 items-center text-md text-right">                
+              <div className="flex justify-end gap-5 items-center text-md text-right">
+              <Link
+            href={"/"}
+          >
+            Home
+          </Link>
+          <Link
+            href={"/product-listings"}
+          >
+            Listing
+          </Link>
+          <Link
+            href={"/cart"}
+          >
+            Shopping Cart
+          </Link>               
                 <MdOutlineShoppingCart className="w-6 h-6 " />
                 <FaRegUserCircle className="w-6 h-6 " />
                 <IoSearch className="w-6 h-6 " />
