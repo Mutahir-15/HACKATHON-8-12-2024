@@ -20,10 +20,7 @@ const Navbar = () => {
               <Menu className="w-6 h-6" />
             </SheetTrigger>
             <SheetContent className="p-14 w-full">
-              <div className="flex justify-end gap-5 items-center text-md text-right">
-                <Link href={"/product-listings"}>Listing</Link>
-                <Link href={"/product-listing"}>Sample Product</Link>
-                <Link href={"/cart"}>Shopping Cart</Link>
+              <div className="flex justify-end gap-5 items-center text-md text-right">                
                 <MdOutlineShoppingCart className="w-6 h-6 " />
                 <FaRegUserCircle className="w-6 h-6 " />
                 <IoSearch className="w-6 h-6 " />
@@ -55,19 +52,19 @@ const Navbar = () => {
         <div className="flex hidden lg:flex justify-end mb-2 gap-5 items-center text-md text-left">
           <Link
             href={"/"}
-            className="font-bold bg-customColors-border-dark p-2 px-6 text-customColors-dark-primary hover:bg-customColors-dark-primary hover:text-customColors-light-grey hover:font-bold"
+            className="font-bold p-2  px-6 hover:bg-customColors-dark-primary hover:text-customColors-light-grey hover:font-bold"
           >
             Home
           </Link>
           <Link
             href={"/product-listings"}
-            className=" font-bold bg-customColors-border-dark p-2 px-6 text-customColors-dark-primary hover:bg-customColors-dark-primary hover:text-customColors-light-grey hover:font-bold"
+            className=" font-bold p-2 px-6 hover:bg-customColors-dark-primary hover:text-customColors-light-grey hover:font-bold"
           >
             Listing
           </Link>
           <Link
             href={"/cart"}
-            className="bg-customColors-border-dark font-bold p-2 px-6 text-customColors-dark-primary hover:bg-customColors-dark-primary  hover:text-customColors-light-grey hover:font-bold"
+            className="font-bold p-2 px-6 hover:bg-customColors-dark-primary  hover:text-customColors-light-grey hover:font-bold"
           >
             Shopping Cart
           </Link>
