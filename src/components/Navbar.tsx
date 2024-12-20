@@ -13,7 +13,9 @@ const Navbar = () => {
       <div className="container mt-4 mx-auto flex justify-between items-center">
         <div className="flex flex-1 justify-between items-center">
           {/* Main Title */}
+          <Link href={"/"}>
           <h1 className="text-2xl text-right font-bold">Avion</h1>
+          </Link>
           {/* Mobile Menu */}
           <Sheet>
             <SheetTrigger className="lg:hidden">
@@ -67,23 +69,25 @@ const Navbar = () => {
         <div className="flex hidden lg:flex justify-end mb-2 gap-5 items-center text-md text-left">
           <Link
             href={"/"}
-            className="p-2 text-gray-700 px-6 hover:text-customColors-primary hover:font-bold"
+            className="p-2 text-gray-700 px-6 hover:text-black"
           >
             Home
           </Link>
           <Link
             href={"/product-listings"}
-            className="p-2 text-gray-700 px-6 hover:text-customColors-primary hover:font-bold"
+            className="p-2 text-gray-700 px-6 hover:text-black"
           >
             Listing
           </Link>
           <Link
             href={"/cart"}
-            className="p-2 text-gray-700 px-6  hover:text-customColors-primary hover:font-bold"
+            className="p-2 text-gray-700 px-6  hover:text-black"
           >
             Shopping Cart
           </Link>
+          <Link href={"/cart"}>
           <MdOutlineShoppingCart className="top-[26px] mr-4" />
+          </Link>
           <FaRegUserCircle className="mr-4" />
           <IoSearch />
         </div>
