@@ -24,10 +24,10 @@ const Listing = () => {
 
   return (
     <section className="max-w-[1440px] mx-auto py-16 px-8 bg-white">
-      <div className="lg:w-[1440px] grid grid-cols-2 lg:grid-cols-4">
+      <div className="lg:w-[1440px] grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {products.map((product) => (
           <div key={product.id} className="flex flex-col items-left p-6 hover:shadow-md hover:scale-105 transition-transform duration-300">
-            <Image src={product.image} alt={product.title} width={305} height={375} className="mb-4" />
+            <Image src={product.image} alt={product.title} width={300} height={300} className="mb-4" />
             <h3 className="text-lg mb-2">{product.title}</h3>
             <p className="text-gray-800 text-xl mb-2">£{product.price}</p>
           </div>
