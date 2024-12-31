@@ -1,13 +1,19 @@
-import React from 'react';
-import Image from 'next/image';
-import { FaSortDown } from 'react-icons/fa6';
+import React from "react";
+import Image from "next/image";
+import { FaSortDown } from "react-icons/fa6";
 
 function ProductListings() {
   return (
     <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
       {/* Header Image */}
       <div>
-        <Image src="/images/PLS1.png" alt="BG Image" width={1440} height={209} className="w-full" />
+        <Image
+          src="/images/PLS1.png"
+          alt="BG Image"
+          width={1440}
+          height={209}
+          className="w-full"
+        />
       </div>
 
       {/* Filters Section */}
@@ -37,9 +43,9 @@ function ProductListings() {
         </div>
 
         {/* Right Sorting */}
-        <div className="flex items-center gap-3">
+        <div className="flex justify-center items-center gap-3">
           <p>Sorting by:</p>
-          <div className="flex items-center gap-1">
+          <div className="flex justify-center items-center gap-1">
             <p>Date added</p>
             <FaSortDown />
           </div>
@@ -69,7 +75,7 @@ function ProductListings() {
 
       {/* View Collection Button */}
       <div className="text-center mt-8">
-        <button className="w-full md:w-auto px-6 py-3 bg-gray-300 text-black font-medium hover:bg-gray-800 hover:text-white rounded">
+        <button className="w-full md:w-auto mb-5 lg:mb-10 px-6 py-3 bg-gray-300 text-black font-medium hover:bg-gray-800 hover:text-white rounded">
           View collection
         </button>
       </div>

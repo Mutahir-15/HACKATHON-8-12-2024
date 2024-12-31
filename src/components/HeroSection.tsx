@@ -27,7 +27,7 @@ function HeroSection() {
             Shop the new Spring 2022 collection today
           </p>
           {/* Button */}
-          <button className="mt-8 px-4 py-2 sm:px-6 sm:py-3 bg-customColors-dark-primary text-white font-medium hover:bg-gray-800 rounded">
+          <button className="mt-8 px-4 py-2 sm:px-6 sm:py-3 bg-customColors-dark-primary text-white font-medium hover:bg-customColors-border-dark hover:text-black transition-colors duration-300 rounded">
             <Link href="/product-listings">View collection</Link>
           </button>
         </div>

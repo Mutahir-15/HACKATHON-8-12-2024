@@ -54,7 +54,7 @@ function Footer() {
               required
               className="p-3 mb-2 md:mb-0 bg-customColors-primary text-black md:mr-2 flex-grow"
             />
-            <button className="p-3 bg-customColors-light-grey text-black font-medium">
+            <button className="p-3 bg-customColors-light-grey text-black font-medium hover:bg-gray-800 hover:text-white transition-colors duration-300">
               Sign up
             </button>
           </form>
