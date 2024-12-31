@@ -16,15 +16,11 @@ const Listing = () => {
 
   useEffect(() => {
     const getProducts = async () => {
-      try {
-        const productData = await fetchProducts();
-        setProducts(productData);
-      } catch (error) {
-        console.error('Error fetching products:', error);
-      }
+      const productData = await fetchProducts();
+      setProducts(productData);
     };
     getProducts();
-  }, []);
+  }, []);  
 
   return (
     <section className="max-w-[1440px] mx-auto py-16 px-8 bg-white">
