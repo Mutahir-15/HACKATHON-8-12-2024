@@ -13,7 +13,7 @@ function BrandDifferentiators() {
       </h2>
       {/* Branding Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div className="flex flex-col items-start bg-gray-50 p-6 h-[244px]">
+        <div className="flex flex-col items-start bg-gray-50 p-6 h-[244px] hover:shadow-lg hover:scale-105 transition-transform duration-300">
           <TbTruckDelivery size={48} className="mb-4" />
           <h3 className="text-lg font-semibold mb-2">Next day as standard</h3>
           <p className="text-gray-600 text-left">
@@ -21,7 +21,7 @@ function BrandDifferentiators() {
             standard.
           </p>
         </div>
-        <div className="flex flex-col items-start bg-gray-50 p-6 h-[244px]">
+        <div className="flex flex-col items-start bg-gray-50 p-6 h-[244px] hover:shadow-lg hover:scale-105 transition-transform duration-300">
           <IoCheckmarkCircleOutline size={38} className="mb-4" />
           <h3 className="text-lg font-semibold mb-2">Made by true artisans</h3>
           <p className="text-gray-600 text-left">
@@ -29,7 +29,7 @@ function BrandDifferentiators() {
             craftsmanship.
           </p>
         </div>
-        <div className="flex flex-col items-start bg-gray-50 p-6 h-[244px]">
+        <div className="flex flex-col items-start bg-gray-50 p-6 h-[244px] hover:shadow-lg hover:scale-105 transition-transform duration-300">
           <FaRegCreditCard size={38} className="mb-4" />
           <h3 className="text-lg font-semibold mb-2">Unbeatable prices</h3>
           <p className="text-gray-600 text-left">
@@ -37,7 +37,7 @@ function BrandDifferentiators() {
             anywhere.
           </p>
         </div>
-        <div className="flex flex-col items-start bg-gray-50 p-6 h-[244px]">
+        <div className="flex flex-col items-start bg-gray-50 p-6 h-[244px] hover:shadow-lg hover:scale-105 transition-transform duration-300">
           <LuSprout size={38} className="mb-4" />
           <h3 className="text-lg font-semibold mb-2">Recycled packaging</h3>
           <p className="text-gray-600 text-left">
