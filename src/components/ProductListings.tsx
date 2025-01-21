@@ -1,10 +1,57 @@
-import React from "react";
-import Image from "next/image";
-import { FaSortDown } from "react-icons/fa6";
+'use client'
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { FaSortDown } from 'react-icons/fa6';
+import { client } from '@/sanity/lib/client';
+import { FAQ } from './FAQ';
 
-function ProductListings() {
+interface Product {
+  image_url: string;
+  _id: string;
+  name: string;
+  category: string;
+  price: number;
+  quantity: number;
+}
+
+const ProductListings = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const fetchedProducts: Product[] = await client.fetch(
+          `
+          *[_type == "product"] {
+            _id,
+            name,
+            description,
+            quantity,
+            price,
+            dimensions,
+            "image_url": image.asset->url,
+          }
+          `
+        );
+        setProducts(fetchedProducts);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <section className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="max-w-[1440px] mx-auto mb-10 px-4 sm:px-6 lg:px-8">
       {/* Header Image */}
       <div>
         <Image
@@ -54,33 +101,28 @@ function ProductListings() {
 
       {/* Product Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-6">
-        {/* Example Product Items */}
-        {Array.from({ length: 12 }).map((_, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-start p-4 bg-white shadow-sm hover:shadow-md hover:scale-105 transition-transform duration-300 rounded-md"
-          >
-            <Image
-              src={`/images/listing${(index % 8) + 1}.png`}
-              alt={`Product ${index + 1}`}
-              width={305}
-              height={375}
-              className="mb-4 w-full rounded"
-            />
-            <h3 className="text-lg font-semibold mb-2">Product {index + 1}</h3>
-            <p className="text-gray-800 text-xl mb-2">£{(index + 1) * 50}</p>
-          </div>
+        {products.map((product) => (
+          <Link href={`/product-listings/${product._id}`} key={product._id}>
+            <div className="flex flex-col items-start p-4 bg-white shadow-sm hover:shadow-md hover:scale-105 transition-transform duration-300 rounded-md">
+              <div className="relative w-full h-64">
+                <Image
+                  src={product.image_url}
+                  alt={product.name}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded"
+                />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
+              <p className="text-gray-800 text-xl mb-2">${product.price}</p>
+              <p className="text-sm text-gray-500">Quantity: {product.quantity || 'N/A'}</p>
+            </div>
+          </Link>
         ))}
       </div>
-
-      {/* View Collection Button */}
-      <div className="text-center mt-8">
-        <button className="w-full md:w-auto mb-5 lg:mb-10 px-6 py-3 bg-gray-300 text-black font-medium hover:bg-gray-800 hover:text-white rounded">
-          View collection
-        </button>
-      </div>
+      <FAQ/>
     </section>
   );
-}
+};
 
 export default ProductListings;

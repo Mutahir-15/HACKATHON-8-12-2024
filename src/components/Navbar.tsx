@@ -5,6 +5,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { CommandDemo } from "./Command";
 
 const Navbar = () => {
   return (
@@ -38,9 +39,10 @@ const Navbar = () => {
           >
             Shopping Cart
           </Link>               
-                <MdOutlineShoppingCart className="w-6 h-6 " />
+                <MdOutlineShoppingCart className="w-6 h-6 " href="/cart" />
                 <FaRegUserCircle className="w-6 h-6 " />
                 <IoSearch className="w-6 h-6 " />
+                <CommandDemo/>
               </div>
               <div className="grid grid-cols-1 gap-4">
                 {[

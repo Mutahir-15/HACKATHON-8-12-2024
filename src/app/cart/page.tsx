@@ -1,12 +1,15 @@
-import ShoppingCart from '@/components/ShoppingBasket'
-import React from 'react'
+// pages/cart.tsx
 
-function page() {
+import React from 'react';
+import ShoppingCart from '@/components/Cart';
+
+const CartPage: React.FC = () => {
   return (
     <div>
-      <ShoppingCart/>
+      <ShoppingCart />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default CartPage;
+
