@@ -1,30 +1,29 @@
 import { createClient } from '@sanity/client';
 
-// Initialize the client properly
 const client = createClient({
-  projectId: 'NEXT_PUBLIC_SANITY_PROJECT_ID',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID, 
   dataset: 'production', 
   apiVersion: '2023-05-03', 
   useCdn: true
 });
 
 export const fetchCartItems = async () => {
-  const query = `*[_type == "cartItem"]{
+  const query = `*[_type == "product"]{
     _id,
     name,
     description,
     price,
     quantity,
-    "image": image.asset->url
+    "image_url": image.asset->url
   }`;
 
   const items = await client.fetch(query);
-  return items.map((item: { _id: any; name: any; description: any; price: any; quantity: any; image: any; }) => ({
+  return items.map((item: { _id: string; name: string; description: string; price: number; quantity: number; image_url: string; }) => ({
     id: item._id,
     name: item.name,
     description: item.description,
     price: item.price,
     quantity: item.quantity,
-    image: item.image,
+    image: item.image_url,
   }));
 };

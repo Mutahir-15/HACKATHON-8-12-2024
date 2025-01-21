@@ -9,6 +9,12 @@ interface ProductPageProps {
     productId: string;
   };
 }
+interface Dimensions {
+  width: string;
+  height: string;
+  depth: string;
+
+}
 
 // Fetch product data on the server
 const fetchProductData = async (productId: string): Promise<Product | null> => {
@@ -29,7 +35,7 @@ const ProductPage = async ({ params }: ProductPageProps) => {
     notFound(); 
   }
 
-  const { width, height, depth } = product.dimensions;
+  const { width, height, depth } = product.dimensions as unknown as Dimensions;
 
   return (
     <main>
